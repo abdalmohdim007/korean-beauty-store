@@ -77,7 +77,7 @@ export default function CheckoutPage() {
       const json = await res.json()
 
       if (!res.ok || json.error) {
-        const details = `Status: ${res.status}\nError: ${json.error}\nCode: ${json.code || '-'}\nDetails: ${json.details || '-'}\nHint: ${json.hint || '-'}`
+        const details = `Status: ${res.status}\nError: ${json.error}\nCode: ${json.code || '-'}\nDetails: ${json.details || '-'}\nHint: ${json.hint || '-'}\nDebug: ${JSON.stringify(json.debug || {})}`
         console.error('Order API error:', json)
         setDebugError(details)
         throw new Error(json.error || 'فشل حفظ الطلب')
