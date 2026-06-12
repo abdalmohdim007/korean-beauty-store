@@ -98,15 +98,6 @@ export default function CheckoutPage() {
         }),
       }).catch(console.error)
 
-      // Open WhatsApp with order summary
-      const productLines = orderProducts
-        .map((p) => `• ${p.name_ar} × ${p.quantity}`)
-        .join('\n')
-      const waMessage = encodeURIComponent(
-        `🛍️ طلب جديد!\n\n👤 الاسم: ${form.customer_name}\n📞 الهاتف: ${form.phone}\n📍 ${form.city} - ${form.address}\n\n${productLines}\n\n💰 المجموع: ${totalPrice().toFixed(3)} دينار`
-      )
-      window.open(`https://wa.me/962787688671?text=${waMessage}`, '_blank')
-
       clearCart()
       setSuccess(true)
     } catch (err) {
@@ -124,8 +115,8 @@ export default function CheckoutPage() {
       <div className="flex flex-col items-center justify-center min-h-[70vh] px-4 text-center">
         <div className="bg-[#FFF0F5] rounded-3xl p-12 max-w-md w-full shadow-lg animate-fadeIn">
           <CheckCircle size={72} className="text-[#FF85A1] mx-auto mb-6" />
-          <h2 className="text-3xl font-bold text-gray-800 mb-3">{tr.orderSuccess}</h2>
-          <p className="text-gray-500 mb-8 leading-relaxed">{tr.orderSuccessDesc}</p>
+          <h2 className="text-3xl font-bold text-gray-800 mb-3">تم استلام طلبك بنجاح! 🎉</h2>
+          <p className="text-gray-500 mb-8 leading-relaxed">سنتواصل معك قريباً على رقم الهاتف الذي أدخلته لتأكيد طلبك وتحديد موعد التوصيل.</p>
           <Link href="/" className="btn-primary block py-3 text-base">{tr.backHome}</Link>
         </div>
       </div>
