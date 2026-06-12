@@ -26,6 +26,7 @@ export default function CheckoutPage() {
     address: '',
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
+  const [debugError, setDebugError] = useState<string | null>(null)
 
   const cities = tr.jordanianCities
 
@@ -49,6 +50,7 @@ export default function CheckoutPage() {
     }
 
     setLoading(true)
+    setDebugError(null)
     try {
       const orderProducts = items.map((i) => ({
         id: i.product.id,
@@ -60,7 +62,7 @@ export default function CheckoutPage() {
       }))
 
       // Save order to Supabase
-      const { error } = await supabase.from('orders').insert({
+      const { error, data } = await supabase.from('orders').insert({
         customer_name: form.customer_name,
         phone: form.phone,
         city: form.city,
@@ -68,12 +70,15 @@ export default function CheckoutPage() {
         products: orderProducts,
         total: totalPrice(),
         status: 'pending',
-      })
+      }).select()
 
       if (error) {
+        const details = `Code: ${error.code}\nMessage: ${error.message}\nDetails: ${error.details}\nHint: ${error.hint}\nURL: ${process.env.NEXT_PUBLIC_SUPABASE_URL?.slice(0, 30)}...`
         console.error('Supabase insert error:', error)
+        setDebugError(details)
         throw new Error(error.message || 'فشل حفظ الطلب')
       }
+      console.log('Order inserted:', data)
 
       // Fire-and-forget: email notification
       fetch('/api/send-order-email', {
@@ -193,6 +198,13 @@ export default function CheckoutPage() {
                 <span className="font-medium text-gray-700">💵 {tr.cashOnDelivery}</span>
               </div>
             </div>
+
+            {debugError && (
+              <div className="bg-red-50 border border-red-300 rounded-xl p-4 text-xs font-mono text-red-700 whitespace-pre-wrap break-all">
+                <p className="font-bold mb-2">⚠️ Supabase Error (debug):</p>
+                {debugError}
+              </div>
+            )}
 
             <button
               type="submit"
