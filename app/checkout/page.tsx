@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { CheckCircle, ShoppingBag } from 'lucide-react'
 import { useCartStore, useLangStore } from '@/lib/store'
 import { t } from '@/lib/translations'
-import { supabase } from '@/lib/supabase'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import BackButton from '@/components/BackButton'
@@ -61,24 +60,29 @@ export default function CheckoutPage() {
         image: i.product.images?.[0] || '',
       }))
 
-      // Save order to Supabase
-      const { error, data } = await supabase.from('orders').insert({
-        customer_name: form.customer_name,
-        phone: form.phone,
-        city: form.city,
-        address: form.address,
-        products: orderProducts,
-        total: totalPrice(),
-        status: 'pending',
-      }).select()
+      // Save order via server-side API (avoids NEXT_PUBLIC build-time baking issue)
+      const res = await fetch('/api/create-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          customer_name: form.customer_name,
+          phone: form.phone,
+          city: form.city,
+          address: form.address,
+          products: orderProducts,
+          total: totalPrice(),
+        }),
+      })
 
-      if (error) {
-        const details = `Code: ${error.code}\nMessage: ${error.message}\nDetails: ${error.details}\nHint: ${error.hint}\nURL: ${process.env.NEXT_PUBLIC_SUPABASE_URL?.slice(0, 30)}...`
-        console.error('Supabase insert error:', error)
+      const json = await res.json()
+
+      if (!res.ok || json.error) {
+        const details = `Status: ${res.status}\nError: ${json.error}\nCode: ${json.code || '-'}\nDetails: ${json.details || '-'}\nHint: ${json.hint || '-'}`
+        console.error('Order API error:', json)
         setDebugError(details)
-        throw new Error(error.message || 'فشل حفظ الطلب')
+        throw new Error(json.error || 'فشل حفظ الطلب')
       }
-      console.log('Order inserted:', data)
+      console.log('Order created:', json.order)
 
       // Fire-and-forget: email notification
       fetch('/api/send-order-email', {
