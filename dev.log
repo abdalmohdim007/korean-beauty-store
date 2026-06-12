@@ -1,0 +1,209 @@
+
+> korean-beauty-store@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 891ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1622ms (734 modules)
+ GET / 200 in 1716ms
+ ✓ Compiled /products in 144ms (723 modules)
+ GET /products 200 in 134ms
+ ✓ Compiled /about in 65ms (739 modules)
+ GET /about 200 in 97ms
+ ✓ Compiled /contact in 77ms (755 modules)
+ GET /contact 200 in 94ms
+ ✓ Compiled /cart in 66ms (765 modules)
+ GET /cart 200 in 84ms
+ ✓ Compiled /checkout in 73ms (775 modules)
+ GET /checkout 200 in 95ms
+ GET / 200 in 15ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ GET /products 200 in 12ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ GET /cart 200 in 12ms
+ GET /about 200 in 18ms
+ GET /contact 200 in 10ms
+ GET /checkout 200 in 11ms
+ ✓ Compiled /admin in 149ms (791 modules)
+ GET /admin 200 in 214ms
+ GET / 200 in 16ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ GET /products 200 in 13ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ GET /cart 200 in 14ms
+ GET /about 200 in 17ms
+ GET /contact 200 in 13ms
+ GET /checkout 200 in 13ms
+ GET /admin 200 in 10ms
+ GET /products 200 in 16ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ GET / 200 in 11ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ GET /products 200 in 13ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ GET / 200 in 13ms
+ GET / 200 in 31ms
+ ✓ Compiled /favicon.ico in 137ms (398 modules)
+ GET /favicon.ico 200 in 166ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ✓ Compiled /about in 56ms (407 modules)
+ ✓ Compiled /contact in 56ms (416 modules)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ GET / 200 in 89ms
+ ✓ Compiled /admin in 63ms (425 modules)
+ GET /admin 200 in 113ms
+ GET /favicon.ico 200 in 71ms
+ GET /favicon.ico 200 in 70ms
+ ✓ Compiled /_not-found in 243ms (807 modules)
+ GET /apple-touch-icon-precomposed.png 404 in 270ms
+ GET /apple-touch-icon.png 404 in 265ms
+ GET /admin 200 in 25ms
+ GET / 200 in 33ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ GET / 200 in 19ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ✓ Compiled /products in 84ms (433 modules)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ✓ Compiled /admin/products/[id] in 153ms (828 modules)
+ GET /products 200 in 59ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ✓ Compiled in 286ms (787 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /products 200 in 71ms
+ GET /admin 200 in 28ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 127ms (801 modules)
+ GET /admin 200 in 13ms
+ GET /admin 200 in 11ms
+ ✓ Compiled in 104ms (801 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /admin 200 in 16ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 121ms (801 modules)
+ GET /admin 200 in 25ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 148ms (805 modules)
+ GET /admin 200 in 36ms
+ GET /admin 200 in 10ms
+ GET /admin 200 in 11ms
+ ✓ Compiled in 87ms (401 modules)
+ ✓ Compiled in 167ms (805 modules)
+ ✓ Compiled in 187ms (808 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /products 200 in 56ms
+ GET /admin 200 in 13ms
+ ✓ Compiled in 84ms (794 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /admin 200 in 40ms
+ GET /products 200 in 41ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ✓ Compiled in 104ms (808 modules)
+ ✓ Compiled in 72ms (402 modules)
+ ✓ Compiled in 66ms (402 modules)
+ ✓ Compiled / in 74ms (412 modules)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ✓ Compiled in 153ms (814 modules)
+ ✓ Compiled in 111ms (814 modules)
+ ✓ Compiled in 105ms (805 modules)
+ ✓ Compiled in 99ms (805 modules)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ✓ Compiled /about in 65ms (412 modules)
+ ✓ Compiled in 121ms (814 modules)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 232ms (814 modules)
+ ✓ Compiled in 0ms (412 modules)
+ ✓ Compiled in 0ms (412 modules)
+ ✓ Compiled in 0ms (412 modules)
+ GET /admin 200 in 132ms
+ ✓ Compiled in 138ms (814 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /admin 200 in 34ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ GET / 200 in 16ms
+ GET /admin 200 in 11ms
+ GET /admin? 200 in 8ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ GET /admin 200 in 11ms
+ GET /products 200 in 28ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1570194065650-d99fb4b38176?w=600&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1586495777744-4e6232bf4f3a?w=600&q=80 404
+ ✓ Compiled /admin/products/new in 199ms (796 modules)
+ GET /products 200 in 92ms
+ ✓ Compiled /products/[id] in 313ms (800 modules)
+ ✓ Compiled in 79ms (408 modules)
+ ✓ Compiled in 120ms (408 modules)
+ ✓ Compiled in 61ms (408 modules)
+ ✓ Compiled in 57ms (408 modules)
+ ✓ Compiled in 142ms (808 modules)
+ ✓ Compiled in 71ms (410 modules)
+ ✓ Compiled in 59ms (410 modules)
+ ✓ Compiled in 58ms (410 modules)
+ ✓ Compiled in 104ms (812 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 210ms (812 modules)
+ ✓ Compiled in 0ms (402 modules)
+ ✓ Compiled in 0ms (402 modules)
+ ✓ Compiled in 0ms (402 modules)
+ GET /admin 200 in 133ms
+ ✓ Compiled in 172ms (812 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /admin 200 in 34ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 124ms (812 modules)
+ GET /admin 200 in 28ms
+ GET /admin 200 in 21ms
+ ✓ Compiled /contact in 66ms (411 modules)
+ GET /contact 200 in 96ms
+ ✓ Compiled /about in 62ms (419 modules)
+ GET /about 200 in 103ms
+ GET /products/1 200 in 22ms
+ ✓ Compiled /checkout in 61ms (425 modules)
+ GET /checkout 200 in 96ms
+ ✓ Compiled in 140ms (835 modules)
+ GET /products/1 200 in 22ms
+ ✓ Compiled /products in 104ms (408 modules)
+ ✓ Compiled in 261ms (814 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 62ms

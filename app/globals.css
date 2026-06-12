@@ -3,21 +3,88 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --pink-primary: #FF85A1;
+  --pink-light: #FFF0F5;
+  --pink-medium: #FFB6C8;
+  --pink-dark: #E8607A;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: var(--font-tajawal), 'Tajawal', sans-serif;
+}
+
+.font-arabic {
+  font-family: var(--font-tajawal), 'Tajawal', sans-serif;
+}
+
+.pink-gradient {
+  background: linear-gradient(135deg, #FF85A1 0%, #FFB6C8 50%, #FFF0F5 100%);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(255, 133, 161, 0.25);
+}
+
+.btn-primary {
+  @apply bg-[#FF85A1] hover:bg-[#E8607A] text-white font-medium py-2.5 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply border-2 border-[#FF85A1] text-[#FF85A1] hover:bg-[#FF85A1] hover:text-white font-medium py-2.5 px-6 rounded-full transition-all duration-300;
+}
+
+.input-field {
+  @apply w-full border border-pink-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#FF85A1] focus:border-transparent bg-white transition-all;
+}
+
+/* Hide number input spinner arrows */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF0F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF85A1;
+  border-radius: 3px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
 
 @layer utilities {

@@ -9,8 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        pink: {
+          primary: '#FF85A1',
+          light: '#FFF0F5',
+          medium: '#FFB6C8',
+          dark: '#E8607A',
+        },
+      },
+      fontFamily: {
+        arabic: ['var(--font-tajawal)', 'Tajawal', 'sans-serif'],
       },
     },
   },
