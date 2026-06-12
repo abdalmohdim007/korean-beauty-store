@@ -2,18 +2,18 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
 export async function POST(req: NextRequest) {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  const supabaseUrl = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseKey = process.env.SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
   if (!supabaseUrl || supabaseUrl.includes('placeholder')) {
     return NextResponse.json(
-      { error: 'NEXT_PUBLIC_SUPABASE_URL is not configured on the server' },
+      { error: 'Supabase URL is not configured. Add SUPABASE_URL to Vercel env vars.' },
       { status: 500 }
     )
   }
   if (!supabaseKey || supabaseKey.includes('placeholder')) {
     return NextResponse.json(
-      { error: 'NEXT_PUBLIC_SUPABASE_ANON_KEY is not configured on the server' },
+      { error: 'Supabase key is not configured. Add SUPABASE_ANON_KEY to Vercel env vars.' },
       { status: 500 }
     )
   }
