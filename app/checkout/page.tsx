@@ -70,9 +70,12 @@ export default function CheckoutPage() {
         status: 'pending',
       })
 
-      if (error) throw error
+      if (error) {
+        console.error('Supabase insert error:', error)
+        throw new Error(error.message || 'فشل حفظ الطلب')
+      }
 
-      // Send email notification (fire and forget — don't block success screen)
+      // Fire-and-forget: email notification
       fetch('/api/send-order-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -86,11 +89,21 @@ export default function CheckoutPage() {
         }),
       }).catch(console.error)
 
+      // Open WhatsApp with order summary
+      const productLines = orderProducts
+        .map((p) => `• ${p.name_ar} × ${p.quantity}`)
+        .join('\n')
+      const waMessage = encodeURIComponent(
+        `🛍️ طلب جديد!\n\n👤 الاسم: ${form.customer_name}\n📞 الهاتف: ${form.phone}\n📍 ${form.city} - ${form.address}\n\n${productLines}\n\n💰 المجموع: ${totalPrice().toFixed(3)} دينار`
+      )
+      window.open(`https://wa.me/962787688671?text=${waMessage}`, '_blank')
+
       clearCart()
       setSuccess(true)
     } catch (err) {
-      console.error(err)
-      toast.error(tr.error)
+      console.error('Checkout error:', err)
+      const msg = err instanceof Error ? err.message : tr.error
+      toast.error(msg)
     } finally {
       setLoading(false)
     }
