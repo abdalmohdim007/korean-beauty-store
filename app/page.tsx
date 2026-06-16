@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeft, ArrowRight, Sparkles } from 'lucide-react'
 import InstagramIcon from '@/components/InstagramIcon'
+import FacebookIcon from '@/components/FacebookIcon'
 import { useEffect, useState } from 'react'
 import { supabase, Product } from '@/lib/supabase'
 import { SAMPLE_PRODUCTS } from '@/lib/sample-data'
@@ -49,39 +50,36 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pink-gradient min-h-[85vh] flex items-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          {['🌸', '✨', '💗', '🌺', '💫', '🌷'].map((emoji, i) => (
-            <span
-              key={i}
-              className="absolute text-4xl animate-float"
-              style={{
-                left: `${10 + i * 15}%`,
-                top: `${20 + (i % 3) * 25}%`,
-                animationDelay: `${i * 0.5}s`,
-              }}
-            >
-              {emoji}
-            </span>
-          ))}
-        </div>
+      <section className="relative w-full min-h-[85vh] flex items-center overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="/hero-image.jpg"
+          alt="منتجات الجمال الكورية"
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+          priority
+        />
+        {/* Pink overlay to keep brand aesthetic and ensure text is readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FF85A1]/80 via-[#ffb6c8]/60 to-transparent" />
 
-        <div className="max-w-6xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center gap-12 relative z-10">
-          <div className="flex-1 text-center md:text-start">
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 w-full">
+          <div className="max-w-xl">
             <Link href="/products" className="inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full mb-6 text-[#E8607A] font-medium text-sm hover:bg-white/70 transition-colors">
               <Sparkles size={14} />
               {isRTL ? 'جديد في المتجر' : 'New Arrivals'}
             </Link>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight drop-shadow-sm">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight drop-shadow-md">
               {tr.heroTitle}
             </h1>
-            <p className="text-white/90 text-lg md:text-xl mb-3 max-w-xl leading-relaxed">
+            <p className="text-white/95 text-lg md:text-xl mb-3 leading-relaxed drop-shadow-sm">
               {tr.heroSubtitle}
             </p>
-            <p className="text-white font-bold text-base md:text-lg mb-8 max-w-xl">
+            <p className="text-white font-bold text-base md:text-lg mb-8 drop-shadow-sm">
               منتجات الجمال الكورية - جمال لا تشوبه شائبة
             </p>
-            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+            <div className="flex flex-wrap gap-4">
               <Link href="/products" className="btn-primary text-base py-3 px-8 flex items-center gap-2">
                 {tr.shopNow}
                 {isRTL ? <ArrowLeft size={18} /> : <ArrowRight size={18} />}
@@ -95,19 +93,15 @@ export default function HomePage() {
                 <InstagramIcon size={18} className="text-pink-500" />
                 {tr.followInstagram}
               </a>
-            </div>
-          </div>
-
-          <div className="flex-1 flex justify-center">
-            <div className="relative w-full max-w-lg h-72 md:h-96 rounded-3xl overflow-hidden shadow-2xl">
-              <Image
-                src="/hero-image.jpg"
-                alt="منتجات الجمال الكورية"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              />
+              <a
+                href="https://www.facebook.com/share/1EAVJWrjpY/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white/80 hover:bg-white text-gray-700 font-medium py-3 px-8 rounded-full transition-all shadow-md hover:shadow-lg text-base"
+              >
+                <FacebookIcon size={18} className="text-blue-600" />
+                {isRTL ? 'منتجات الجمال الكورية' : 'منتجات الجمال الكورية'}
+              </a>
             </div>
           </div>
         </div>

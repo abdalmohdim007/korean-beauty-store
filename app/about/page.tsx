@@ -8,22 +8,22 @@ import BackButton from '@/components/BackButton'
 
 const STATS = [
   { icon: Users, valueAr: '+١٠,٠٠٠', valueEn: '10,000+', labelAr: 'عميلة سعيدة', labelEn: 'Happy Customers' },
-  { icon: Star, valueAr: '+١٥', valueEn: '15+', labelAr: 'سنوات خبرة', labelEn: 'Years Experience' },
+  { icon: Star, valueAr: '٢٠١٩', valueEn: '2019', labelAr: 'بداية رحلتنا', labelEn: 'Since 2019' },
   { icon: ShieldCheck, valueAr: '١٠٠٪', valueEn: '100%', labelAr: 'منتجات أصلية', labelEn: 'Authentic Products' },
   { icon: Truck, valueAr: 'سريع', valueEn: 'Fast', labelAr: 'توصيل لكل الأردن', labelEn: 'Delivery Across Jordan' },
 ]
 
 const FEATURES_AR = [
   { icon: ShieldCheck, title: 'منتجات أصلية ١٠٠٪', body: 'نضمن لكِ أن جميع منتجاتنا أصلية ومستوردة مباشرة من كوريا الجنوبية. لا مكان للتقليد في متجرنا.' },
-  { icon: Star, title: 'خبرة في عالم الجمال الكوري', body: 'لدينا أكثر من ١٥ سنة من الخبرة في اختيار وتوفير أفضل منتجات العناية بالبشرة الكورية التي تناسب البشرة العربية.' },
+  { icon: Star, title: 'شغف بالجمال الكوري منذ ٢٠١٩', body: 'بدأنا رحلتنا في عالم الجمال الكوري منذ عام ٢٠١٩، نختار بعناية كل منتج ليناسب البشرة العربية ويمنحها الإشراقة التي تستحقها.' },
   { icon: Users, title: 'ثقة أكثر من ١٠,٠٠٠ عميلة', body: 'بنينا مجتمعاً من العميلات الراضيات اللواتي يثقن بجودة منتجاتنا ويعدن للتسوق مراراً وتكراراً.' },
   { icon: Truck, title: 'توصيل سريع لجميع المحافظات', body: 'نوصل طلباتك لجميع محافظات المملكة الأردنية بسرعة وأمان مع الحفاظ على جودة المنتجات.' },
 ]
 
 const FEATURES_EN = [
   { icon: ShieldCheck, title: '100% Authentic Products', body: 'We guarantee all our products are authentic and imported directly from South Korea. No counterfeits, ever.' },
-  { icon: Star, title: 'Korean Beauty Expertise', body: 'With over 15 years of experience, we carefully curate Korean skincare products that work beautifully for Middle Eastern skin.' },
-  { icon: Users, title: 'Trusted by 3000+ Customers', body: "We've built a community of satisfied customers who trust our quality and come back time and again." },
+  { icon: Star, title: 'Passionate About K-Beauty Since 2019', body: 'We started our Korean beauty journey in 2019, carefully selecting every product to suit Middle Eastern skin and bring out its natural glow.' },
+  { icon: Users, title: 'Trusted by 10,000+ Customers', body: "We've built a community of satisfied customers who trust our quality and come back time and again." },
   { icon: Truck, title: 'Fast Delivery Across Jordan', body: 'We deliver to all Jordan governorates quickly and safely, keeping your products in perfect condition.' },
 ]
 
@@ -57,8 +57,8 @@ export default function AboutPage() {
           </h1>
           <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-3">
             {isRTL
-              ? 'وجهتكِ الأولى لمنتجات الجمال الكورية الأصيلة في الأردن'
-              : 'Your first destination for authentic Korean beauty products in Jordan'}
+              ? 'بدأنا رحلتنا في عالم الجمال الكوري منذ عام ٢٠١٩'
+              : 'We started our Korean beauty journey since 2019'}
           </p>
           <p className="text-white font-bold text-lg md:text-xl drop-shadow-sm">
             منتجات الجمال الكورية - جمال لا تشوبه شائبة
@@ -92,10 +92,10 @@ export default function AboutPage() {
         {isRTL ? (
           <div className="bg-[#FFF0F5] rounded-3xl p-8 text-gray-700 leading-loose text-base space-y-4">
             <p>
-              انطلقنا من شغف حقيقي بعالم الجمال الكوري، ومن إيمان راسخ بأن كل سيدة تستحق الحصول على منتجات عناية أصيلة وفعّالة بأسعار مناسبة.
+              بدأنا رحلتنا في عالم الجمال الكوري منذ عام ٢٠١٩، من شغف حقيقي وإيمان راسخ بأن كل سيدة تستحق الحصول على منتجات عناية أصيلة وفعّالة بأسعار مناسبة.
             </p>
             <p>
-              بدأنا رحلتنا قبل أكثر من ١٥ سنة بهدف واحد: جلب أفضل ما أنتجته كوريا الجنوبية من منتجات تجميلية مباشرةً إلى يدي المرأة الأردنية. اليوم، نفخر بثقة أكثر من ١٠,٠٠٠ عميلة راضية يشاركننا هذا الشغف ويعدن للتسوق مراراً.
+              انطلقنا بهدف واحد: جلب أفضل ما أنتجته كوريا الجنوبية من منتجات تجميلية مباشرةً إلى يدي المرأة الأردنية. ومنذ ذلك الحين، نمت ثقة عميلاتنا شيئاً فشيئاً حتى وصلنا اليوم إلى أكثر من ١٠,٠٠٠ عميلة سعيدة يشاركننا هذا الشغف.
             </p>
             <p>
               كل منتج في متجرنا يمر بعملية اختيار دقيقة للتأكد من أصالته وجودته وملاءمته للبشرة العربية. نستورد مباشرة من كوريا الجنوبية لنضمن لكِ الحصول على المنتج الأصلي بلا وسيط.
@@ -107,10 +107,10 @@ export default function AboutPage() {
         ) : (
           <div className="bg-[#FFF0F5] rounded-3xl p-8 text-gray-700 leading-loose text-base space-y-4">
             <p>
-              We started from a genuine passion for Korean beauty and a firm belief that every woman deserves access to authentic, effective skincare at fair prices.
+              We started our Korean beauty journey in 2019, driven by a genuine passion and a firm belief that every woman deserves access to authentic, effective skincare at fair prices.
             </p>
             <p>
-              Over 15 years ago, we set out with one goal: to bring the best of South Korea&apos;s beauty innovations directly to women across Jordan. Today, we&apos;re proud to be trusted by over 10,000 happy customers who share our passion and return time and again.
+              From day one, our goal was simple: bring the best of South Korea&apos;s beauty innovations directly to women across Jordan. Since then, our community has grown steadily to over 10,000 happy customers who share our love for K-beauty.
             </p>
             <p>
               Every product in our store goes through a careful selection process to verify its authenticity, quality, and suitability for Middle Eastern skin. We import directly from South Korea — no middlemen, no compromises.
