@@ -108,7 +108,7 @@ export async function POST(req: NextRequest) {
 
     await transporter.sendMail({
       from: `"منتجات الجمال الكورية 🌸" <${process.env.GMAIL_USER}>`,
-      to: process.env.ORDER_NOTIFICATION_EMAIL || 'abedalmohdim@gmail.com',
+      to: process.env.ORDER_NOTIFICATION_EMAIL || 'koreanproductsjo@gmail.com',
       subject: `🛍️ طلب جديد من ${customer_name} — ${Number(total).toFixed(3)} دينار`,
       html,
     })

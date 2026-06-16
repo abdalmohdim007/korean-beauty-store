@@ -55,10 +55,13 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-sm">
             {isRTL ? 'من نحن' : 'About Us'}
           </h1>
-          <p className="text-white/90 text-lg md:text-xl leading-relaxed">
+          <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-3">
             {isRTL
               ? 'وجهتكِ الأولى لمنتجات الجمال الكورية الأصيلة في الأردن'
               : 'Your first destination for authentic Korean beauty products in Jordan'}
+          </p>
+          <p className="text-white font-bold text-lg md:text-xl drop-shadow-sm">
+            منتجات الجمال الكورية - جمال لا تشوبه شائبة
           </p>
         </div>
       </section>

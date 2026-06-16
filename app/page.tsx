@@ -74,8 +74,11 @@ export default function HomePage() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight drop-shadow-sm">
               {tr.heroTitle}
             </h1>
-            <p className="text-white/90 text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
+            <p className="text-white/90 text-lg md:text-xl mb-3 max-w-xl leading-relaxed">
               {tr.heroSubtitle}
+            </p>
+            <p className="text-white font-bold text-base md:text-lg mb-8 max-w-xl">
+              منتجات الجمال الكورية - جمال لا تشوبه شائبة
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <Link href="/products" className="btn-primary text-base py-3 px-8 flex items-center gap-2">

@@ -4,6 +4,7 @@ import { useLangStore } from '@/lib/store'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import InstagramIcon from '@/components/InstagramIcon'
+import FacebookIcon from '@/components/FacebookIcon'
 import BackButton from '@/components/BackButton'
 
 const PHONE = '+962787688671'
@@ -80,7 +81,7 @@ export default function ContactPage() {
             href={`https://www.instagram.com/${INSTAGRAM}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col items-center gap-4 bg-white rounded-3xl border border-pink-100 shadow-sm hover:shadow-lg hover:border-pink-400 p-8 transition-all sm:col-span-2"
+            className="group flex flex-col items-center gap-4 bg-white rounded-3xl border border-pink-100 shadow-sm hover:shadow-lg hover:border-pink-400 p-8 transition-all"
           >
             <div className="w-16 h-16 rounded-full bg-[#FFF0F5] group-hover:bg-gradient-to-br group-hover:from-purple-500 group-hover:via-pink-500 group-hover:to-yellow-400 flex items-center justify-center transition-all">
               <InstagramIcon size={28} className="text-[#FF85A1] group-hover:text-white transition-colors" />
@@ -90,6 +91,27 @@ export default function ContactPage() {
               <p className="text-[#FF85A1] font-medium text-base" dir="ltr">@{INSTAGRAM}</p>
               <p className="text-gray-400 text-sm mt-2">
                 {isRTL ? 'تابعينا لأحدث المنتجات والعروض' : 'Follow us for the latest products and offers'}
+              </p>
+            </div>
+          </a>
+
+          {/* Facebook */}
+          <a
+            href="https://www.facebook.com/share/1EAVJWrjpY/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col items-center gap-4 bg-white rounded-3xl border border-pink-100 shadow-sm hover:shadow-lg hover:border-blue-400 p-8 transition-all"
+          >
+            <div className="w-16 h-16 rounded-full bg-blue-50 group-hover:bg-blue-600 flex items-center justify-center transition-colors">
+              <FacebookIcon size={28} className="text-blue-600 group-hover:text-white transition-colors" />
+            </div>
+            <div className="text-center">
+              <p className="font-bold text-gray-800 text-lg mb-1">Facebook</p>
+              <p className="text-blue-600 font-medium text-base">
+                {isRTL ? 'صفحتنا الرسمية' : 'Our Official Page'}
+              </p>
+              <p className="text-gray-400 text-sm mt-2">
+                {isRTL ? 'تابعينا على فيسبوك للعروض الحصرية' : 'Follow us on Facebook for exclusive offers'}
               </p>
             </div>
           </a>

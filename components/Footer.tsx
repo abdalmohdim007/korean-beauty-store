@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { Heart } from 'lucide-react'
 import InstagramIcon from '@/components/InstagramIcon'
+import FacebookIcon from '@/components/FacebookIcon'
 import { useLangStore } from '@/lib/store'
 import { t } from '@/lib/translations'
 
@@ -59,6 +60,19 @@ export default function Footer() {
                 <InstagramIcon size={16} />
               </div>
               <span className="text-sm">@korean_beauty_products_jo</span>
+            </a>
+            <a
+              href="https://www.facebook.com/share/1EAVJWrjpY/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition-colors group mt-2"
+            >
+              <div className="bg-blue-600 p-2 rounded-xl text-white group-hover:scale-110 transition-transform">
+                <FacebookIcon size={16} />
+              </div>
+              <span className="text-sm">
+                {lang === 'ar' ? 'صفحتنا على فيسبوك' : 'Our Facebook Page'}
+              </span>
             </a>
           </div>
         </div>
