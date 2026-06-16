@@ -1,6 +1,7 @@
 'use client'
 export const dynamic = 'force-dynamic'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, ArrowRight, Sparkles } from 'lucide-react'
 import InstagramIcon from '@/components/InstagramIcon'
 import { useEffect, useState } from 'react'
@@ -98,13 +99,15 @@ export default function HomePage() {
           </div>
 
           <div className="flex-1 flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
-              <div className="absolute inset-0 bg-white/30 rounded-full blur-3xl" />
-              <div className="relative z-10 w-full h-full flex items-center justify-center">
-                <span className="text-[160px] md:text-[200px] animate-float" style={{ filter: 'drop-shadow(0 10px 30px rgba(255,133,161,0.5))' }}>
-                  🌸
-                </span>
-              </div>
+            <div className="relative w-full max-w-lg h-72 md:h-96 rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/hero-image.jpg"
+                alt="منتجات الجمال الكورية"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
           </div>
         </div>
